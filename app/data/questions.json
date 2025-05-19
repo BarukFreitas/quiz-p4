@@ -1,42 +1,58 @@
 [
-    {
-      "id": 1,
-      "image": "/images/quiz/persona4/shadow_teddie_closeup.jpg",
-      "options": ["Yosuke Hanamura", "Chie Satonaka", "Teddie", "Kanji Tatsumi"],
-      "correctAnswer": "Teddie",
-      "characterName": "Teddie",
-      "fullImage": "/images/gallery/persona4/teddie.png"
-    },
-    {
-      "id": 2,
-      "image": "/images/quiz/persona4/chie_silhouette.png",
-      "options": ["Yukiko Amagi", "Chie Satonaka", "Rise Kujikawa", "Naoto Shirogane"],
-      "correctAnswer": "Chie Satonaka",
-      "characterName": "Chie Satonaka",
-      "fullImage": "/images/gallery/persona4/chie.png"
-    },
-    {
-      "id": 3,
-      "image": "/images/quiz/persona4/yosuke_glasses.jpg",
-      "options": ["Kanji Tatsumi", "Yosuke Hanamura", "Souji Seta", "Akihiko Sanada"],
-      "correctAnswer": "Yosuke Hanamura",
-      "characterName": "Yosuke Hanamura",
-      "fullImage": "/images/gallery/persona4/yosuke.png"
-    },
-    {
-      "id": 4,
-      "image": "/images/quiz/persona4/yukiko_fan.png",
-      "options": ["Chie Satonaka", "Yukiko Amagi", "Naoto Shirogane", "Rise Kujikawa"],
-      "correctAnswer": "Yukiko Amagi",
-      "characterName": "Yukiko Amagi",
-      "fullImage": "/images/gallery/persona4/yukiko.png"
-    },
-    {
-      "id": 5,
-      "image": "/images/quiz/persona4/kanji_shadow.png",
-      "options": ["Teddie", "Kanji Tatsumi", "Yosuke Hanamura", "Souji Seta"],
-      "correctAnswer": "Kanji Tatsumi",
-      "characterName": "Kanji Tatsumi",
-      "fullImage": "/images/gallery/persona4/kanji.png"
-    }
-  ]
+  {
+    "id": 1,
+    "image": "/images/quiz/persona4/teddie_silhouette.webp",
+    "options": ["Yosuke Hanamura", "Chie Satonaka", "Teddie", "Kanji Tatsumi"],
+    "correctAnswer": "Teddie",
+    "characterName": "Teddie",
+    "fullImage": "/images/gallery/persona4/teddie.webp"
+  },
+  {
+    "id": 2,
+    "image": "/images/quiz/persona4/chie_silhouette.webp",
+    "options": ["Yukiko Amagi", "Chie Satonaka", "Rise Kujikawa", "Naoto Shirogane"],
+    "correctAnswer": "Chie Satonaka",
+    "characterName": "Chie Satonaka",
+    "fullImage": "/images/gallery/persona4/chie.webp"
+  },
+  {
+    "id": 3,
+    "image": "/images/quiz/persona4/yosuke_silhouette.webp",
+    "options": ["Kanji Tatsumi", "Yosuke Hanamura", "Naoto Shirogane", "Rise Kujikawa"],
+    "correctAnswer": "Yosuke Hanamura",
+    "characterName": "Yosuke Hanamura",
+    "fullImage": "/images/gallery/persona4/yosuke.webp"
+  },
+  {
+    "id": 4,
+    "image": "/images/quiz/persona4/yukiko_silhouette.webp",
+    "options": ["Chie Satonaka", "Yukiko Amagi", "Naoto Shirogane", "Rise Kujikawa"],
+    "correctAnswer": "Yukiko Amagi",
+    "characterName": "Yukiko Amagi",
+    "fullImage": "/images/gallery/persona4/yukiko.webp"
+  },
+  {
+    "id": 5,
+    "image": "/images/quiz/persona4/kanji_silhouette.webp",
+    "options": ["Teddie", "Kanji Tatsumi", "Yosuke Hanamura", "Naoto Shirogane"],
+    "correctAnswer": "Kanji Tatsumi",
+    "characterName": "Kanji Tatsumi",
+    "fullImage": "/images/gallery/persona4/kanji.webp"
+  },
+  {
+    "id": 6,
+    "image": "/images/quiz/persona4/naoto_silhouette.webp",
+    "options": ["Teddie", "Kanji Tatsumi", "Naoto Shirogane", "Rise Kujikawa"],
+    "correctAnswer": "Naoto Shirogane",
+    "characterName": "Naoto Shirogane",
+    "fullImage": "/images/gallery/persona4/naoto.webp"
+  },
+  {
+    "id": 7,
+    "image": "/images/quiz/persona4/rise_silhouette.webp",
+    "options": ["Chie Satonaka", "Yosuke Hanamura", "Rise Kujikawa", "Yukiko Amagi"],
+    "correctAnswer": "Rise Kujikawa",
+    "characterName": "Rise Kujikawa",
+    "fullImage": "/images/gallery/persona4/rise.webp"
+  }
+]
