@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation'; // Import useParams (se você precisar acessar params diretamente aqui)
 import Typography from '../../components/atoms/Typography';
 import Button from '../../components/atoms/Button';
 
@@ -9,9 +9,10 @@ interface Props {
   params: { correct: string };
 }
 
-const ResultadoPage: React.FC<Props> = ({ params }) => {
+const ResultadoPage: React.FC<Props> = () => {
   const router = useRouter();
-  const isCorrectAll = params.correct === 'true';
+  const { correct } = useParams<{ correct: string }>(); // Use useParams para acessar os parâmetros
+  const isCorrectAll = correct === 'true';
 
   return (
     <div className="flex flex-col items-center justify-center p-8">
