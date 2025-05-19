@@ -1,9 +1,7 @@
 import React from 'react';
 import NextImage from 'next/image';
 
-interface ImageProps extends React.ComponentProps<typeof NextImage> {}
-
-const Image: React.FC<ImageProps> = (props) => {
+const Image: React.FC<React.ComponentProps<typeof NextImage>> = (props) => {
   return <NextImage {...props} />;
 };
 

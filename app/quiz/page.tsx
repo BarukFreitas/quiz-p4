@@ -48,6 +48,9 @@ const QuizPage: React.FC = () => {
           console.log('Quiz completo! Pontuação final:', finalScore);
           // Router.push(`/resultado/${finalScore === totalQuestions}`);
         }}
+        onAnswerSelect={handleAnswerSelect} // Passando a função para QuizSection
+        onNextQuestion={handleNextQuestion} // Passando a função para QuizSection
+        currentQuestion={currentQuestion} // Passando a pergunta atual
       />
     </div>
   );
