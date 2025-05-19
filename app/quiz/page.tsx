@@ -1,3 +1,4 @@
+// ./app/quiz/page.tsx
 "use client";
 import React from 'react';
 import useGameLogic from '../hooks/useGameLogic';
@@ -43,14 +44,9 @@ const QuizPage: React.FC = () => {
     <div className="flex flex-col items-center justify-center p-8">
       <QuizSection
         questions={questionsData as Question[]}
-        onQuizComplete={(finalScore) => {
-          // Lógica de conclusão do quiz (navegação para resultados)
-          console.log('Quiz completo! Pontuação final:', finalScore);
-          // Router.push(`/resultado/${finalScore === totalQuestions}`);
-        }}
-        onAnswerSelect={handleAnswerSelect} // Passando a função para QuizSection
-        onNextQuestion={handleNextQuestion} // Passando a função para QuizSection
-        currentQuestion={currentQuestion} // Passando a pergunta atual
+        onAnswerSelect={handleAnswerSelect}
+        onNextQuestion={handleNextQuestion}
+        currentQuestion={currentQuestion}
       />
     </div>
   );

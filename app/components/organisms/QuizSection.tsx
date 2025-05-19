@@ -1,18 +1,18 @@
+// ./app/components/organisms/QuizSection.tsx
 "use client";
 import React, { useState } from 'react';
 import QuestionCard from '../molecules/QuestionCard';
 import AnswerFeedback from '../molecules/AnswerFeedback';
-import { Question } from '../../types'; // Importe a interface Question
+import { Question } from '../../types';
 
 interface QuizSectionProps {
   questions: Question[];
-  onQuizComplete: (score: number) => void;
-  onAnswerSelect: (answer: string) => void; // Adicione a prop onAnswerSelect
-  onNextQuestion: () => void; // Adicione a prop onNextQuestion
-  currentQuestion: Question; // Adicione a prop currentQuestion
+  onAnswerSelect: (answer: string) => void;
+  onNextQuestion: () => void;
+  currentQuestion: Question;
 }
 
-const QuizSection: React.FC<QuizSectionProps> = ({ questions, onQuizComplete, onAnswerSelect, onNextQuestion, currentQuestion }) => {
+const QuizSection: React.FC<QuizSectionProps> = ({ questions, onAnswerSelect, onNextQuestion, currentQuestion }) => {
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
 
@@ -30,7 +30,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ questions, onQuizComplete, on
   };
 
   if (!currentQuestion) {
-    return <div>Carregando perguntas...</div>; // Ou outra mensagem de carregamento
+    return <div>Carregando perguntas...</div>;
   }
 
   return (
