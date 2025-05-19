@@ -16,7 +16,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ image, options, onSelect })
       <div className="grid grid-cols-2 gap-4">
         {options.map((option) => (
           <Button key={option} onClick={() => onSelect(option)} className="w-full">
-            <Typography variant="p">{option}</Typography> {/* Usando Typography para o texto do botão */}
+            <Typography variant="p">{option}</Typography>
           </Button>
         ))}
       </div>

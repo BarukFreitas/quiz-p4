@@ -22,7 +22,7 @@ const QuizSection: React.FC<QuizSectionProps> = ({ questions, onAnswerSelect, on
     const isCorrectAnswer = answer === currentQuestion.correctAnswer;
     setIsCorrect(isCorrectAnswer);
     if (isCorrectAnswer) {
-      setScore((prevScore) => prevScore + 1); // Incrementa a pontuação imediatamente
+      setScore((prevScore) => prevScore + 1);
     }
   };
 

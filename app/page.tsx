@@ -1,7 +1,7 @@
 import React from 'react';
 import Homepage from './components/organisms/Homepage';
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
     <div>
       <Homepage />
@@ -9,4 +9,3 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;

@@ -9,11 +9,11 @@ const Typography: React.FC<TypographyProps> = ({ children, variant, color, ...pr
   const Tag = variant;
   let className = '';
   const colorClasses = {
-    primary: 'text-[#ffe52c]', // Amarelo
-    secondary: 'text-[#7fe6ef]', // Azul claro
-    accent: 'text-[#faa622]', // Laranja
-    'text-base': 'text-gray-800', // Cor de texto padrão
-    'text-secondary': 'text-gray-600', // Cor de texto secundária
+    primary: 'text-[#ffe52c]',
+    secondary: 'text-[#7fe6ef]',
+    accent: 'text-[#faa622]',
+    'text-base': 'text-gray-800',
+    'text-secondary': 'text-gray-600',
   };
 
   switch (variant) {

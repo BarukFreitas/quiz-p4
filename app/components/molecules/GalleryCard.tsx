@@ -18,10 +18,10 @@ const GalleryCard: React.FC<GalleryCardProps> = ({ image, characterName, onFavor
       <Typography variant="p" className="text-center mb-2">{characterName}</Typography>
       <div className="flex gap-2">
         <button onClick={onFavorite} className="p-2 rounded-full hover:bg-gray-100">
-          <Icon name="heart" color={isFavorite ? '#c22303' : '#718096'} size={20} /> {/* Cor do coração */}
+          <Icon name="heart" color={isFavorite ? '#c22303' : '#718096'} size={20} />
         </button>
         <button onClick={onShare} className="p-2 rounded-full hover:bg-gray-100">
-          <Icon name="share" color="#7fe6ef" size={20} /> {/* Cor do compartilhar */}
+          <Icon name="share" color="#7fe6ef" size={20} />
         </button>
       </div>
     </div>

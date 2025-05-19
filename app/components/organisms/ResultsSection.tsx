@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 interface ResultsSectionProps {
   score: number;
   totalQuestions: number;
-  onRestart: () => void; // Adicione esta linha!
+  onRestart: () => void;
 }
 
 const ResultsSection: React.FC<ResultsSectionProps> = ({ score, totalQuestions, onRestart }) => {
@@ -23,13 +23,13 @@ const ResultsSection: React.FC<ResultsSectionProps> = ({ score, totalQuestions, 
       ranking.sort((a, b) => b.score - a.score);
       const rankingString = JSON.stringify(ranking);
       localStorage.setItem('quizRanking', rankingString);
-      console.log('Dados salvos no localStorage:', rankingString); // Adicione este log
+      console.log('Dados salvos no localStorage:', rankingString);
       router.push('/ranking');
     }
   };
 
   const handleRestart = () => {
-    onRestart(); // Chame a função onRestart passada como prop!
+    onRestart();
   };
 
   return (

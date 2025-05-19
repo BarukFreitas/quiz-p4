@@ -3,10 +3,10 @@ import React from 'react';
 import Typography from '../atoms/Typography';
 import Button from '../atoms/Button';
 import Link from 'next/link';
-import Image from 'next/image'; // Importe o componente Image do Next.js
-import homeGif from '../../../public/images/gifs/teddie_dancing.webp'; // Ajuste o caminho conforme a localização do seu GIF
+import Image from 'next/image';
+import homeGif from '../../../public/images/gifs/teddie_dancing.webp';
 
-const Homepage: React.FC = () => {
+export default function Homepage() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-[#faa622]">
       <Typography variant="h1" color="text-secondary" className="mb-6">Adivinhe o Personagem de Persona 4!</Typography>
@@ -19,4 +19,3 @@ const Homepage: React.FC = () => {
   );
 };
 
-export default Homepage;

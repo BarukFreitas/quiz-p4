@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Question } from '../types'; // Importe a interface Question
+import { Question } from '../types';
 
 interface UseGameLogicProps {
   questions: Question[];
   onQuizComplete: (score: number) => void;
 }
 
-const useGameLogic = ({ questions, onQuizComplete }: UseGameLogicProps) => {
+export default function useGameLogic ({ questions, onQuizComplete }: UseGameLogicProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
@@ -49,5 +49,3 @@ const useGameLogic = ({ questions, onQuizComplete }: UseGameLogicProps) => {
     totalQuestions: questions.length,
   };
 };
-
-export default useGameLogic;

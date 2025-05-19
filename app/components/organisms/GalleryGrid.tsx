@@ -1,6 +1,6 @@
 import React from 'react';
 import GalleryCard from '../molecules/GalleryCard';
-import { GalleryItemType } from '../../types'; // Importe a interface GalleryItemType
+import { GalleryItemType } from '../../types';
 
 interface GalleryGridProps {
   items: GalleryItemType[];
@@ -11,7 +11,7 @@ interface GalleryGridProps {
 
 const GalleryGrid: React.FC<GalleryGridProps> = ({ items, onFavorite, onShare, favoriteItems }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-[#7fe6ef] rounded-md"> {/* Fundo azul claro */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 bg-[#7fe6ef] rounded-md">
       {items.map((item) => (
         <GalleryCard
           key={item.id}

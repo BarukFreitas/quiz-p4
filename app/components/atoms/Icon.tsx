@@ -1,12 +1,12 @@
 import React from 'react';
 import { IconType } from 'react-icons';
-import { FaHeart, FaShareAlt } from 'react-icons/fa'; // Exemplo de ícones
+import { FaHeart, FaShareAlt } from 'react-icons/fa';
 
 interface IconProps {
-  name: 'heart' | 'share'; // Adicione outros nomes de ícones conforme necessário
+  name: 'heart' | 'share';
   className?: string;
-  color?: string; // Adicione a prop para controlar a cor
-  size?: string | number; // Adicione a prop para controlar o tamanho
+  color?: string;
+  size?: string | number;
 }
 
 const Icon: React.FC<IconProps> = ({ name, className, color, size }) => {
@@ -24,7 +24,7 @@ const Icon: React.FC<IconProps> = ({ name, className, color, size }) => {
       IconComponent = FaShareAlt;
       break;
     default:
-      return null; // Ou outro tratamento de erro
+      return null;
   }
 
   return IconComponent ? <IconComponent className={className} style={style} /> : null;

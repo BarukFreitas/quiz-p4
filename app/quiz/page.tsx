@@ -5,12 +5,11 @@ import useGameLogic from '../hooks/useGameLogic';
 import { Question } from '../types';
 import QuizSection from '../components/organisms/QuizSection';
 import ResultsSection from '../components/organisms/ResultsSection';
-import { useRouter } from 'next/navigation'; // Import useRouter
+import { useRouter } from 'next/navigation';
 
-// Importe as perguntas do seu arquivo JSON
 import questionsData from '../data/questions.json';
 
-const QuizPage: React.FC = () => {
+export default function QuizPage() {
   const router = useRouter();
   const {
     currentQuestion,
@@ -22,25 +21,22 @@ const QuizPage: React.FC = () => {
   } = useGameLogic({
     questions: questionsData as Question[],
     onQuizComplete: (finalScore) => {
-      router.push(`/resultado/${finalScore === totalQuestions}`); // Navegação para a página de resultados
+      router.push(`/resultado/${finalScore === totalQuestions}`);
     },
   });
 
   if (!currentQuestion) {
-    return <div className="flex justify-center items-center h-full">Carregando quiz...</div>; // Centralizar carregamento
+    return <div className="flex justify-center items-center h-full">Carregando quiz...</div>;
   }
 
-  // Renderiza a seção de resultados quando o quiz termina
   if (currentQuestionIndex === totalQuestions) {
     return <ResultsSection score={score} totalQuestions={totalQuestions} onRestart={() => {
-      // Implementar lógica para reiniciar o quiz (resetar estado no hook)
-      // Por enquanto, vamos apenas recarregar a página para reiniciar o estado
       router.push('/quiz');
     }} />;
   }
 
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen"> {/* Fundo cinza claro, altura mínima */}
+    <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen"> 
       <QuizSection
         questions={questionsData as Question[]}
         onAnswerSelect={handleAnswerSelect}
@@ -50,5 +46,3 @@ const QuizPage: React.FC = () => {
     </div>
   );
 };
-
-export default QuizPage;

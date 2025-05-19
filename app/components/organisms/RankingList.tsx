@@ -1,10 +1,10 @@
 import React from 'react';
 import ScoreItem from '../molecules/ScoreItem';
 import Typography from '../atoms/Typography';
-import { Score } from '../../types'; // Importe a interface Score
+import { Score } from '../../types';
 
 interface RankingListProps {
-  scores: Score[]; // Use a interface importada
+  scores: Score[];
 }
 
 const RankingList: React.FC<RankingListProps> = ({ scores }) => {

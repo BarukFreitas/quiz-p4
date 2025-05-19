@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Typography from '../atoms/Typography';
 
-const Footer: React.FC = () => {
+export default function Footer() {
   return (
     <footer className="bg-[#ffe52c] py-8 text-center text-gray-600 border-t border-gray-300">
       <div>
@@ -17,5 +17,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;
