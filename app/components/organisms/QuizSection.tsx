@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import QuestionCard from '../molecules/QuestionCard';
 import AnswerFeedback from '../molecules/AnswerFeedback';
 import { Question } from '../../types';
+import Typography from '../atoms/Typography';
 
 interface QuizSectionProps {
   questions: Question[];
@@ -18,23 +19,24 @@ const QuizSection: React.FC<QuizSectionProps> = ({ questions, onAnswerSelect, on
 
   const handleAnswerSelection = (answer: string) => {
     onAnswerSelect(answer);
-    setIsCorrect(answer === currentQuestion.correctAnswer);
+    const isCorrectAnswer = answer === currentQuestion.correctAnswer;
+    setIsCorrect(isCorrectAnswer);
+    if (isCorrectAnswer) {
+      setScore((prevScore) => prevScore + 1); // Incrementa a pontuação imediatamente
+    }
   };
 
   const handleNext = () => {
-    if (isCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
     setIsCorrect(null);
     onNextQuestion();
   };
 
   if (!currentQuestion) {
-    return <div>Carregando perguntas...</div>;
+    return <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen">Carregando perguntas...</div>;
   }
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-4 p-6 bg-[#f0f0f0] rounded-md">
       {isCorrect === null ? (
         <QuestionCard
           image={currentQuestion.image}
@@ -50,8 +52,8 @@ const QuizSection: React.FC<QuizSectionProps> = ({ questions, onAnswerSelect, on
           onNext={handleNext}
         />
       )}
-      <p className="text-gray-600">Pergunta {currentQuestion.id} de {questions.length}</p>
-      {isCorrect !== null && <p className="text-blue-500">Pontuação atual: {score}</p>}
+      <Typography variant="p" color="text-secondary">Pergunta {currentQuestion.id} de {questions.length}</Typography>
+      {isCorrect !== null && <Typography variant="p" color="accent">Pontuação atual: {score}</Typography>}
     </div>
   );
 };

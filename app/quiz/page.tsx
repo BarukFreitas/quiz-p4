@@ -5,11 +5,13 @@ import useGameLogic from '../hooks/useGameLogic';
 import { Question } from '../types';
 import QuizSection from '../components/organisms/QuizSection';
 import ResultsSection from '../components/organisms/ResultsSection';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
 // Importe as perguntas do seu arquivo JSON
 import questionsData from '../data/questions.json';
 
 const QuizPage: React.FC = () => {
+  const router = useRouter();
   const {
     currentQuestion,
     handleAnswerSelect,
@@ -20,28 +22,25 @@ const QuizPage: React.FC = () => {
   } = useGameLogic({
     questions: questionsData as Question[],
     onQuizComplete: (finalScore) => {
-      // Aqui você pode redirecionar para a página de resultados
-      // Ou atualizar o estado para mostrar a seção de resultados
-      console.log('Quiz completo! Pontuação final:', finalScore);
-      // Por enquanto, vamos apenas logar. Mais tarde, implementaremos a navegação.
-      // Router.push(`/resultado/${finalScore === totalQuestions}`); // Exemplo de navegação
+      router.push(`/resultado/${finalScore === totalQuestions}`); // Navegação para a página de resultados
     },
   });
 
   if (!currentQuestion) {
-    return <div>Carregando quiz...</div>;
+    return <div className="flex justify-center items-center h-full">Carregando quiz...</div>; // Centralizar carregamento
   }
 
-  // Renderiza a seção de resultados quando o quiz termina (por enquanto, baseado na última pergunta)
+  // Renderiza a seção de resultados quando o quiz termina
   if (currentQuestionIndex === totalQuestions) {
     return <ResultsSection score={score} totalQuestions={totalQuestions} onRestart={() => {
-      // Implementar lógica para reiniciar o quiz (resetar estado, índice, etc.)
-      console.log('Reiniciar quiz');
+      // Implementar lógica para reiniciar o quiz (resetar estado no hook)
+      // Por enquanto, vamos apenas recarregar a página para reiniciar o estado
+      router.push('/quiz');
     }} />;
   }
 
   return (
-    <div className="flex flex-col items-center justify-center p-8">
+    <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen"> {/* Fundo cinza claro, altura mínima */}
       <QuizSection
         questions={questionsData as Question[]}
         onAnswerSelect={handleAnswerSelect}

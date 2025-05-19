@@ -2,11 +2,19 @@ import React from 'react';
 
 interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement> {
   variant: 'h1' | 'h2' | 'h3' | 'p' | 'span';
+  color?: 'primary' | 'secondary' | 'accent' | 'text-base' | 'text-secondary'; // Adicione opções de cor
 }
 
-const Typography: React.FC<TypographyProps> = ({ children, variant, ...props }) => {
+const Typography: React.FC<TypographyProps> = ({ children, variant, color, ...props }) => {
   const Tag = variant;
   let className = '';
+  const colorClasses = {
+    primary: 'text-[#ffe52c]', // Amarelo
+    secondary: 'text-[#7fe6ef]', // Azul claro
+    accent: 'text-[#faa622]', // Laranja
+    'text-base': 'text-gray-800', // Cor de texto padrão
+    'text-secondary': 'text-gray-600', // Cor de texto secundária
+  };
 
   switch (variant) {
     case 'h1':
@@ -28,7 +36,13 @@ const Typography: React.FC<TypographyProps> = ({ children, variant, ...props }) 
       className = 'text-base';
   }
 
-  return <Tag {...props} className={`${className} ${props.className}`}>{children}</Tag>;
+  const textColorClass = colorClasses[color || 'text-base'] || 'text-gray-800';
+
+  return (
+    <Tag {...props} className={`${className} ${textColorClass} ${props.className}`}>
+      {children}
+    </Tag>
+  );
 };
 
 export default Typography;

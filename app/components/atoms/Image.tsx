@@ -1,7 +1,11 @@
 import React from 'react';
 import NextImage from 'next/image';
 
-const Image: React.FC<React.ComponentProps<typeof NextImage>> = (props) => {
+interface ImageProps extends React.ComponentProps<typeof NextImage> {
+  priority?: boolean; // Adicione a prop priority se necessário
+}
+
+const Image: React.FC<ImageProps> = (props) => {
   return <NextImage {...props} />;
 };
 

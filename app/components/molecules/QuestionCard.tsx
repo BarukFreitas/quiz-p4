@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from '../atoms/Image';
 import Button from '../atoms/Button';
+import Typography from '../atoms/Typography';
 
 interface QuestionCardProps {
   image: string;
@@ -15,7 +16,7 @@ const QuestionCard: React.FC<QuestionCardProps> = ({ image, options, onSelect })
       <div className="grid grid-cols-2 gap-4">
         {options.map((option) => (
           <Button key={option} onClick={() => onSelect(option)} className="w-full">
-            {option}
+            <Typography variant="p">{option}</Typography> {/* Usando Typography para o texto do botão */}
           </Button>
         ))}
       </div>

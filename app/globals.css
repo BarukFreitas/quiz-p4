@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* Branco */
+  --foreground: #171717; /* Preto */
+  --primary: #ffe52c; /* Amarelo */
+  --secondary: #7fe6ef; /* Azul Claro */
+  --accent: #faa622; /* Laranja */
+  --success: #c4d70c; /* Verde Limão */
+  --error: #c22303; /* Vermelho Escuro */
+  --text-base: #374151; /* Cinza Escuro (Tailwind gray-700) */
+  --text-secondary: #6b7280; /* Cinza Médio (Tailwind gray-500) */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans); /* Mantenha se estiver usando essa fonte */
+  --font-mono: var(--font-geist-mono); /* Mantenha se estiver usando essa fonte */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #ffe52c;
+    --secondary: #7fe6ef;
+    --accent: #faa622;
+    --success: #c4d70c;
+    --error: #c22303;
+    --text-base: #d1d5db;
+    --text-secondary: #cccccc; /* Um tom de cinza claro para o modo escuro */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

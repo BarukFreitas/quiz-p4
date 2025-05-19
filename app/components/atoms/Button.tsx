@@ -5,8 +5,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, variant = 'primary', ...props }) => {
-  const primaryClasses = 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded';
-  const secondaryClasses = 'bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded';
+  const primaryClasses = 'bg-[#ffe52c] hover:bg-[#faa622] text-black font-bold py-2 px-4 rounded shadow-md transition duration-300';
+  const secondaryClasses = 'bg-[#c4d70c] hover:bg-[#7fe6ef] text-black font-bold py-2 px-4 rounded shadow-md transition duration-300';
 
   return (
     <button {...props} className={`${variant === 'primary' ? primaryClasses : secondaryClasses} ${props.className}`}>
