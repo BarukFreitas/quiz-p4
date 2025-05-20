@@ -1,12 +1,12 @@
 // ./app/quiz/page.tsx
 "use client";
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import useGameLogic from '../hooks/useGameLogic';
 import { Question } from '../types';
 import QuizSection from '../components/organisms/QuizSection';
-import ResultsSection from '../components/organisms/ResultsSection';
-import { useRouter } from 'next/navigation';
 
+// Importe seus dados de perguntas
 import questionsData from '../data/questions.json';
 
 export default function QuizPage() {
@@ -15,34 +15,20 @@ export default function QuizPage() {
     currentQuestion,
     handleAnswerSelect,
     handleNextQuestion,
-    currentQuestionIndex,
-    totalQuestions,
-    score,
   } = useGameLogic({
     questions: questionsData as Question[],
-    onQuizComplete: (finalScore) => {
-      router.push(`/resultado/${finalScore === totalQuestions}`);
-    },
   });
 
-  if (!currentQuestion) {
-    return <div className="flex justify-center items-center h-full">Carregando quiz...</div>;
-  }
-
-  if (currentQuestionIndex === totalQuestions) {
-    return <ResultsSection score={score} totalQuestions={totalQuestions} onRestart={() => {
-      router.push('/quiz');
-    }} />;
-  }
-
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen"> 
-      <QuizSection
-        questions={questionsData as Question[]}
-        onAnswerSelect={handleAnswerSelect}
-        onNextQuestion={handleNextQuestion}
-        currentQuestion={currentQuestion}
-      />
+    <div className="flex flex-col items-center justify-center p-8 bg-[#f0f0f0] min-h-screen">
+      {currentQuestion && (
+        <QuizSection
+          questions={questionsData as Question[]}
+          onAnswerSelect={handleAnswerSelect}
+          onNextQuestion={handleNextQuestion}
+          currentQuestion={currentQuestion}
+        />
+      )}
     </div>
   );
-};
+}
