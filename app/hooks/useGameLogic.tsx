@@ -21,10 +21,10 @@ export default function useGameLogic ({ questions }: UseGameLogicProps) {
   };
 
   const handleNextQuestion = () => {
-    let finalScore = score; // Crie uma variável para a pontuação final
+    let finalScore = score;
 
     if (isCorrect) {
-      finalScore = score + 1; // Incrementa a pontuação ANTES da navegação
+      finalScore = score + 1;
     }
 
     setSelectedAnswer(null);
@@ -34,9 +34,8 @@ export default function useGameLogic ({ questions }: UseGameLogicProps) {
     if (nextIndex < questions.length) {
       setCurrentQuestionIndex(nextIndex);
       setCurrentQuestion(questions[nextIndex]);
-      setScore(finalScore); // Atualiza o estado da pontuação para a próxima pergunta (se houver)
+      setScore(finalScore);
     } else {
-      // Navegue para a página de resultados com a pontuação FINAL
       router.push(`/resultado/${finalScore}/${questions.length}`);
     }
   };
@@ -49,7 +48,7 @@ export default function useGameLogic ({ questions }: UseGameLogicProps) {
     currentQuestion,
     selectedAnswer,
     isCorrect,
-    score: score, // Retorna o estado da pontuação atualizado
+    score: score,
     handleAnswerSelect,
     handleNextQuestion,
     currentQuestionIndex,

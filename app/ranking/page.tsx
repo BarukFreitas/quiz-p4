@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import RankingList from '../components/organisms/RankingList';
 import Typography from '../components/atoms/Typography';
 
 interface ScoreEntry {

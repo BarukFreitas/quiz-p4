@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement | HTMLSpanElement> {
   variant: 'h1' | 'h2' | 'h3' | 'p' | 'span';
-  color?: 'primary' | 'secondary' | 'accent' | 'text-base' | 'text-secondary'; // Adicione opções de cor
+  color?: 'primary' | 'secondary' | 'accent' | 'text-base' | 'text-secondary';
 }
 
 const Typography: React.FC<TypographyProps> = ({ children, variant, color, ...props }) => {

@@ -2,6 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Typography from '../atoms/Typography';
+import Logo from '@/public/images/logo.png';
+import Image from 'next/image';
 
 export default function Header() {
   return (
@@ -10,6 +12,7 @@ export default function Header() {
         <Link href="/" className="text-xl font-bold text-black">
           Quiz Persona 4
         </Link>
+        <Image src={Logo} alt="Logo da tela inicial" width={50} height={50} />
         <nav>
           <ul className="flex space-x-4">
             <li>

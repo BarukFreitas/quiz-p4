@@ -1,4 +1,3 @@
-// ./app/quiz/page.tsx
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
@@ -6,7 +5,6 @@ import useGameLogic from '../hooks/useGameLogic';
 import { Question } from '../types';
 import QuizSection from '../components/organisms/QuizSection';
 
-// Importe seus dados de perguntas
 import questionsData from '../data/questions.json';
 
 export default function QuizPage() {
