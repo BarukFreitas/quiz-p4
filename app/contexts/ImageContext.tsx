@@ -53,6 +53,7 @@ export const ImageProvider = ({ children }: ImageProviderProps) => {
         { id: 5, url: '/images/gallery/persona4/teddie.webp', name: 'Teddie' },
         { id: 6, url: '/images/gallery/persona4/yosuke.webp', name: 'Yosuke Hanamura' },
         { id: 7, url: '/images/gallery/persona4/yukiko.webp', name: 'Yukiko Amagi' },
+        { id: 8, url: '/images/gallery/persona4/narukami.webp', name: 'Yu Narukami' },
       ];
     setImages(mockImages);
   }, []);

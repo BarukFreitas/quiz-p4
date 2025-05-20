@@ -2,7 +2,7 @@
   {
     "id": 1,
     "image": "/images/quiz/persona4/teddie_silhouette.webp",
-    "options": ["Yosuke Hanamura", "Chie Satonaka", "Teddie", "Kanji Tatsumi"],
+    "options": ["Yosuke Hanamura", "Yu Narukami", "Teddie", "Kanji Tatsumi"],
     "correctAnswer": "Teddie",
     "characterName": "Teddie",
     "fullImage": "/images/gallery/persona4/teddie.webp"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "image": "/images/quiz/persona4/chie_silhouette.webp",
-    "options": ["Yukiko Amagi", "Chie Satonaka", "Rise Kujikawa", "Naoto Shirogane"],
+    "options": ["Yukiko Amagi", "Chie Satonaka", "Yu Narukami", "Naoto Shirogane"],
     "correctAnswer": "Chie Satonaka",
     "characterName": "Chie Satonaka",
     "fullImage": "/images/gallery/persona4/chie.webp"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "image": "/images/quiz/persona4/yukiko_silhouette.webp",
-    "options": ["Chie Satonaka", "Yukiko Amagi", "Naoto Shirogane", "Rise Kujikawa"],
+    "options": ["Chie Satonaka", "Yukiko Amagi", "Yu Narukami", "Rise Kujikawa"],
     "correctAnswer": "Yukiko Amagi",
     "characterName": "Yukiko Amagi",
     "fullImage": "/images/gallery/persona4/yukiko.webp"
@@ -50,9 +50,17 @@
   {
     "id": 7,
     "image": "/images/quiz/persona4/rise_silhouette.webp",
-    "options": ["Chie Satonaka", "Yosuke Hanamura", "Rise Kujikawa", "Yukiko Amagi"],
+    "options": ["Chie Satonaka", "Yu Narukami", "Rise Kujikawa", "Yukiko Amagi"],
     "correctAnswer": "Rise Kujikawa",
     "characterName": "Rise Kujikawa",
     "fullImage": "/images/gallery/persona4/rise.webp"
+  },
+  {
+    "id": 8,
+    "image": "/images/quiz/persona4/narukami_silhouette.webp",
+    "options": ["Yu Narukami", "Yosuke Hanamura", "Rise Kujikawa", "Yukiko Amagi"],
+    "correctAnswer": "Yu Narukami",
+    "characterName": "Yu Narukami",
+    "fullImage": "/images/gallery/persona4/narukami.webp"
   }
 ]
