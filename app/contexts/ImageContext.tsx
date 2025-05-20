@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import { GalleryItemType } from '@/app/types'; 
+import { GalleryItemType } from '@/app/types';
 
 interface ImageContextType {
   images: GalleryItemType[];
@@ -72,20 +72,18 @@ export const ImageProvider = ({ children }: ImageProviderProps) => {
   };
 
   const shareImage = async (imageUrl: string, imageTitle: string) => {
-    if (typeof window !== 'undefined' && navigator.share) {
+    const fullImageUrl = window.location.origin + imageUrl;
+
+    if (typeof window !== 'undefined' && navigator.clipboard) {
       try {
-        await navigator.share({
-          title: `Persona 4 Image: ${imageTitle}`,
-          text: 'Confira esta incrível imagem de Persona 4!',
-          url: window.location.origin + imageUrl,
-        });
-        alert('Imagem compartilhada com sucesso!');
+        await navigator.clipboard.writeText(fullImageUrl);
+        alert('Link da imagem copiado para a área de transferência!');
       } catch (error) {
-        console.error('Erro ao compartilhar:', error);
-        alert('Não foi possível compartilhar a imagem.');
+        console.error('Erro ao copiar link para a área de transferência:', error);
+        alert('Não foi possível copiar o link. Por favor, copie manualmente: ' + fullImageUrl);
       }
     } else {
-      alert(`Para compartilhar, copie este link: ${window.location.origin + imageUrl}`);
+      prompt('Para compartilhar, copie este link (Ctrl+C ou Cmd+C):', fullImageUrl);
     }
   };
 
