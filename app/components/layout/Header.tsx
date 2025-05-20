@@ -18,6 +18,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/galeria" className="hover:text-[#faa622] transition duration-200">
+                <Typography variant="span">Galeria</Typography>
+              </Link>
+            </li>
+            <li>
               <Link href="/sobre" className="hover:text-[#faa622] transition duration-200">
                 <Typography variant="span">Sobre</Typography>
               </Link>
