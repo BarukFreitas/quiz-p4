@@ -85,7 +85,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
       </div>
 
       <div>
-        <label htmlFor="bio" className="block text-sm font-medium text-gray-700">Biografia Curta</label>
+        <label htmlFor="bio" className="block text-sm font-medium text-gray-700">Biografia</label>
         <textarea
           id="bio"
           {...register('bio')}
