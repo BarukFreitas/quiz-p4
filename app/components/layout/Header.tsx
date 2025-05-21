@@ -30,6 +30,11 @@ export default function Header() {
                 <Typography variant="span">Sobre</Typography>
               </Link>
             </li>
+            <li>
+              <Link href="/form" className="hover:text-[#faa622] transition duration-200">
+                <Typography variant="span">Form</Typography>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
