@@ -1,0 +1,45 @@
+{
+  "Footer": {
+    "p": "Persona 4 Quiz - Developed by Baruk Freitas",
+    "span": "© 2025 All rights reserved."
+  },
+  "Header": {
+    "quizTitle": "Persona 4 Quiz",
+    "logoAlt": "Persona 4 Quiz Logo",
+    "homeLink": "Home",
+    "galleryLink": "Gallery",
+    "aboutLink": "About",
+    "formLink": "Form"
+  },
+  "FormPage": {
+    "pageTitle": "Create Your Account",
+    "successMessage": "User registration completed!"
+  },
+  "UserRegistrationForm": {
+    "fullNameLabel": "Full Name",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "bioLabel": "Biography",
+    "termsCheckbox": "I agree with the Terms of Service",
+    "userTypeLabel": "User Type:",
+    "commonUser": "Common User",
+    "premiumUser": "Premium User",
+    "adminUser": "Administrator",
+    "submitButton": "Register",
+    "submittingButton": "Submitting...",
+    "successMessage": "Registration successful!"
+  },
+  "AboutPage": {
+    "title": "About the Persona 4 Quiz",
+    "gifAlt": "Chie dancing GIF",
+    "description": "This is a simple quiz created to test your knowledge about the characters of the beloved game Persona 4. Have fun trying to guess them all!"
+  },
+   "Homepage": {
+    "logoAlt": "Homepage Logo",
+    "title": "Guess the Persona 4 Character!",
+    "description": "Test your knowledge about the characters from the world of Persona 4.",
+    "gifAlt": "Homepage GIF",
+    "startButton": "Start Quiz"
+  }
+}

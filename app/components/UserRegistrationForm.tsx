@@ -3,6 +3,7 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from "next-intl";
 
 import { userRegistrationSchema, UserRegistrationFormData } from '@/lib/validators/userRegistrationSchema';
 
@@ -11,6 +12,9 @@ interface UserRegistrationFormProps {
 }
 
 export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrationFormProps) {
+
+  const t = useTranslations("UserRegistrationForm")
+  
   const {
     register,
     handleSubmit,
@@ -30,10 +34,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
   });
 
   const onSubmit: SubmitHandler<UserRegistrationFormData> = async (data) => {
-    console.log("Processando envio de dados (simulando API)...", data);
     await new Promise(resolve => setTimeout(resolve, 1500));
-
-    console.log("Dados do formulário enviados com sucesso (simulado):", data);
     onSubmitSuccess(data);
     reset();
   };
@@ -41,7 +42,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div>
-        <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Nome Completo</label>
+        <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">{t("fullNameLabel")}</label>
         <input
           type="text"
           id="fullName"
@@ -52,7 +53,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t("emailLabel")}</label>
         <input
           type="email"
           id="email"
@@ -63,7 +64,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
       </div>
 
       <div>
-        <label htmlFor="password" className="block text-sm font-medium text-gray-700">Senha</label>
+        <label htmlFor="password" className="block text-sm font-medium text-gray-700">{t("passwordLabel")}</label>
         <input
           type="password"
           id="password"
@@ -74,7 +75,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
       </div>
 
       <div>
-        <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirmar Senha</label>
+        <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">{t("confirmPasswordLabel")}</label>
         <input
           type="password"
           id="confirmPassword"
@@ -85,7 +86,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
       </div>
 
       <div>
-        <label htmlFor="bio" className="block text-sm font-medium text-gray-700">Biografia</label>
+        <label htmlFor="bio" className="block text-sm font-medium text-gray-700">{t("bioLabel")}</label>
         <textarea
           id="bio"
           {...register('bio')}
@@ -103,13 +104,13 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
           className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
         />
         <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-900">
-          Concordo com os Termos de Serviço
+          {t("termsCheckbox")}
         </label>
       </div>
       {errors.agreeToTerms && <p className="text-red-500 text-xs mt-1">{errors.agreeToTerms.message}</p>}
 
       <div className="mt-4">
-        <span className="block text-sm font-medium text-gray-700 mb-2">Tipo de Usuário:</span>
+        <span className="block text-sm font-medium text-gray-700 mb-2">{t("userTypeLabel")}</span>
         <div className="flex space-x-4">
           <label className="inline-flex items-center">
             <input
@@ -118,7 +119,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
               value="comum"
               className="form-radio text-indigo-600"
             />
-            <span className="ml-2 text-gray-700">Usuário Comum</span>
+            <span className="ml-2 text-gray-700">{t("commonUser")}</span>
           </label>
           <label className="inline-flex items-center">
             <input
@@ -127,7 +128,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
               value="premium"
               className="form-radio text-indigo-600"
             />
-            <span className="ml-2 text-gray-700">Usuário Premium</span>
+            <span className="ml-2 text-gray-700">{t("premiumUser")}</span>
           </label>
           <label className="inline-flex items-center">
             <input
@@ -136,7 +137,7 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
               value="admin"
               className="form-radio text-indigo-600"
             />
-            <span className="ml-2 text-gray-700">Administrador</span>
+            <span className="ml-2 text-gray-700">{t("adminUser")}</span>
           </label>
         </div>
         {errors.userType && <p className="text-red-500 text-xs mt-1">{errors.userType.message}</p>}
@@ -147,11 +148,11 @@ export default function UserRegistrationForm({ onSubmitSuccess }: UserRegistrati
         disabled={isSubmitting}
         className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
       >
-        {isSubmitting ? 'Enviando...' : 'Cadastrar'}
+        {isSubmitting ? t("submittingButton") : t("submitButton")}
       </button>
 
       {isSubmitSuccessful && (
-        <p className="text-green-600 text-sm mt-2 text-center">Cadastro realizado com sucesso!</p>
+        <p className="text-green-600 text-sm mt-2 text-center">{t("successMessage")}</p>
       )}
     </form>
   );

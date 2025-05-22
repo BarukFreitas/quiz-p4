@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import Typography from '../components/atoms/Typography';
+import Typography from '../../components/atoms/Typography';
 
 interface ScoreEntry {
   name: string;

@@ -1,11 +1,11 @@
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import useGameLogic from '../hooks/useGameLogic';
-import { Question } from '../types';
-import QuizSection from '../components/organisms/QuizSection';
+import useGameLogic from '../../hooks/useGameLogic';
+import { Question } from '../../types';
+import QuizSection from '../../components/organisms/QuizSection';
 
-import questionsData from '../data/questions.json';
+import questionsData from '../../data/questions.json';
 
 export default function QuizPage() {
   const router = useRouter();

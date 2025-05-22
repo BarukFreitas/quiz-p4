@@ -1,0 +1,40 @@
+{
+  "Footer": {
+    "p": "Quiz Persona 4 - Desarrollado por Baruk Freitas",
+    "span": "© 2025 Todos los derechos reservados."
+  },
+  "Header": {
+    "quizTitle": "Quiz Persona 4",
+    "logoAlt": "Logo del Quiz Persona 4",
+    "homeLink": "Inicio",
+    "galleryLink": "Galería",
+    "aboutLink": "Acerca de",
+    "formLink": "Formulario"
+  },
+  "FormPage": {
+    "pageTitle": "Crea Tu Cuenta",
+    "successMessage": "¡Registro de usuario completado!"
+  },
+  "UserRegistrationForm": {
+    "fullNameLabel": "Nombre Completo",
+    "emailLabel": "Correo Electrónico",
+    "passwordLabel": "Contraseña",
+    "confirmPasswordLabel": "Confirmar Contraseña",
+    "bioLabel": "Biografía",
+    "termsCheckbox": "Acepto los Términos de Servicio",
+    "userTypeLabel": "Tipo de Usuario:",
+    "commonUser": "Usuario Común",
+    "premiumUser": "Usuario Premium",
+    "adminUser": "Administrador",
+    "submitButton": "Registrarse",
+    "submittingButton": "Enviando...",
+    "successMessage": "¡Registro realizado con éxito!"
+  },
+  "Homepage": {
+    "logoAlt": "Logo de la pantalla de inicio",
+    "title": "¡Adivina el Personaje de Persona 4!",
+    "description": "Pon a prueba tus conocimientos sobre los personajes del mundo de Persona 4.",
+    "gifAlt": "GIF de la pantalla de inicio",
+    "startButton": "Comenzar Quiz"
+  }
+}

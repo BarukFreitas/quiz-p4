@@ -1,0 +1,50 @@
+{
+  "Footer": {
+    "p": "Quiz Persona 4 - Desenvolvido por Baruk Freitas",
+    "span": "© 2025 Todos os direitos reservados."
+  },
+  "Header": {
+    "quizTitle": "Quiz Persona 4",
+    "logoAlt": "Logo do Quiz Persona 4",
+    "homeLink": "Início",
+    "galleryLink": "Galeria",
+    "aboutLink": "Sobre",
+    "formLink": "Formulário"
+  },
+  "FormPage": {
+    "pageTitle": "Crie Sua Conta",
+    "successMessage": "Cadastro de usuário concluído!"
+  },
+  "UserRegistrationForm": {
+    "fullNameLabel": "Nome Completo",
+    "emailLabel": "Email",
+    "passwordLabel": "Senha",
+    "confirmPasswordLabel": "Confirmar Senha",
+    "bioLabel": "Biografia",
+    "termsCheckbox": "Concordo com os Termos de Serviço",
+    "userTypeLabel": "Tipo de Usuário:",
+    "commonUser": "Usuário Comum",
+    "premiumUser": "Usuário Premium",
+    "adminUser": "Administrador",
+    "submitButton": "Cadastrar",
+    "submittingButton": "Enviando...",
+    "successMessage": "Cadastro realizado com sucesso!"
+  },
+   "AboutPage": {
+    "title": "Sobre o Quiz de Persona 4",
+    "gifAlt": "GIF da Chie dançando",
+    "description": "Este é um quiz simples criado para testar seus conhecimentos sobre os personagens do amado jogo Persona 4. Divirta-se tentando adivinhar todos eles!"
+  },
+  "AboutPage": {
+    "title": "Sobre el Quiz de Persona 4",
+    "gifAlt": "GIF de Chie bailando",
+    "description": "¡Este es un quiz simple creado para poner a prueba tus conocimientos sobre los personajes del querido juego Persona 4. ¡Diviértete intentando adivinarlos a todos!"
+  },
+  "Homepage": {
+    "logoAlt": "Logo da tela inicial",
+    "title": "Adivinhe o Personagem de Persona 4!",
+    "description": "Teste seus conhecimentos sobre os personagens do mundo de Persona 4.",
+    "gifAlt": "GIF da tela inicial",
+    "startButton": "Começar Quiz"
+  }
+}

@@ -1,8 +1,8 @@
 'use client'; // Mantenha esta diretiva
 
 import React from 'react';
-import { ImageProvider } from '../contexts/ImageContext';
-import GalleryGrid from '../components/organisms/GalleryGrid';
+import { ImageProvider } from '../../contexts/ImageContext';
+import GalleryGrid from '../../components/organisms/GalleryGrid';
 
 export default function GaleriaPage() {
   return (
